@@ -1,4 +1,4 @@
-# reddit-vid
+# redigen
 
 A program that aims to automate the creation of "reddit videos" (r/AskReddit style).
 
@@ -11,8 +11,8 @@ The current state of the project is such that you can choose a reddit post and t
 Clone the repo
 
 ```console
-$ git clone https://github.com/kyb3r/reddit-vid
-$ cd reddit-vid
+$ git clone https://github.com/kyb3r/redigen
+$ cd redigen
 ```
 
 Install dependancies
