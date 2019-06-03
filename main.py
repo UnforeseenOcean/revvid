@@ -30,7 +30,7 @@ chrome_options.add_experimental_option("prefs",prefs)
 driver = webdriver.Chrome(options=chrome_options)
 driver.get(submission.url)
 
-if submission.over18:
+if submission.over_18:
     yes = driver.find_element_by_class_name('bzs6dt-10')
     yes.click()
 
