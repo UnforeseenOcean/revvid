@@ -1,4 +1,6 @@
 import os
+import time
+import json
 
 from selenium import webdriver
 import praw
@@ -41,18 +43,46 @@ night_mode = driver.find_element_by_class_name('bMUmun')
 night_mode.click()
 dropdown.click() # hide again
 
+try:
+    view_entire_discussion = driver.find_element_by_class_name('j9NixHqtN2j8SKHcdJ0om')
+    view_entire_discussion.click()
+except:
+    pass
 
-view_entire_discussion = driver.find_element_by_class_name('j9NixHqtN2j8SKHcdJ0om')
-view_entire_discussion.click()
+image = driver.find_element_by_class_name('Post').screenshot('img/post.png')
 
-image = driver.find_element_by_class_name('Post').screenshot('images/post.png')
+
+# LOAD PAGE FULLY
+
+last_height = driver.execute_script("return document.body.scrollHeight")
+
+while True:
+    # Scroll down to bottom
+    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+    # Wait to load page
+    time.sleep(0.1)
+
+    new_height = driver.execute_script("return document.body.scrollHeight")
+    if new_height == last_height:
+        break
+    last_height = new_height
 
 comments = driver.find_elements_by_class_name('top-level')
 
 id = 1 
 
+comment_text = {}
+
 for comment in comments:
-    comment.screenshot(f'images/comment-{id}.png')
+    text = comment.find_element_by_class_name('_3cjCphgls6DH-irkVaA0GM').text
+    img_path = f'img/comment-{id}.png'
+    comment_text[img_path] = text
+    comment.screenshot(img_path)
     id += 1
+
+with open('img/comment_text.json') as f:
+    json.dump(comment_text, f)
+
 
 
