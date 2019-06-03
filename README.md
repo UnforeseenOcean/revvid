@@ -30,3 +30,11 @@ Finally run the app via
 ```
 pipenv run python3 app.py
 ```
+
+## License 
+
+GNU GPL v3
+
+## Contributing
+
+Feel free to make contributions, they are always welcome!
