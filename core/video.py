@@ -31,7 +31,7 @@ def composite_video():
     for audio, image in zip(audio_clips, image_clips):
         clip = (
             CompositeVideoClip(
-                [background, image.set_pos("center").resize(0.7)], size=moviesize
+                [background, image.set_pos("center").resize(0.8)], size=moviesize
             )
             .set_duration(audio.duration)
             .set_audio(audio)
@@ -41,6 +41,9 @@ def composite_video():
 
     end_audio = AudioFileClip('dump/end.mp3')
     final.append(background.set_duration(end_audio.duration).set_audio(end_audio))
+
+    mins, secs = divmod(sum(x.duration for x in final), 60)
+    print(f'Duration of video: {int(mins)}m, {int(secs)}s')
 
     concatenate_videoclips(final).write_videofile(
         "video.mp4", fps=20, codec="libx264", audio_codec="aac"
