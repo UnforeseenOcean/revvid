@@ -40,6 +40,9 @@ pipenv run python3 app.py
 ```
 
 ## Usage
+
+Note: This only works on mac since `pyttsx3` supports saving audio files only on mac [pyttsx3#30](https://github.com/nateshmbhat/pyttsx3/issues/30). If theres a better way to get tts audio files cross platform, please make a PR :) 
+
 You can either run the app by itself to get an interactive interface or supply a command line argument for the id of the specific submission you want to fetch screenshots from. 
 
 e.g. 
