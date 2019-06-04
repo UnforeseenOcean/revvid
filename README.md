@@ -7,10 +7,12 @@ The goal for this project is to be able to composite text to speech audio alongs
 The current state of the project allows it to:
 - Take screenshots of top level comments of a thread
 - Generate audio using the epic Daniel voice for each comment. 
-- Composite them into a cool video.
+- Composite them into a cool video. Heres a [**sample**.](https://youtu.be/qaQhsALt8mk)
 
 Todo:
-- Add customisability, since stuff like the outro, subreddit and number of comments are hardcoded.
+- Add customisability, since stuff like the outro, subreddit and number of comments are hardcoded. 
+
+Please feel free to make a PR with improvements :)
 
 ## Installation
 
@@ -38,6 +40,9 @@ pipenv run python3 app.py
 ```
 
 ## Usage
+
+Note: This only works on mac since `pyttsx3` supports saving audio files only on mac [(pyttsx3#30)](https://github.com/nateshmbhat/pyttsx3/issues/30). If theres a better way to get tts audio files cross platform, please make a PR :) 
+
 You can either run the app by itself to get an interactive interface or supply a command line argument for the id of the specific submission you want to fetch screenshots from. 
 
 e.g. 
