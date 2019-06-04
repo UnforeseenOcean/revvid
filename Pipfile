@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 selenium = "*"
 praw = "*"
+pyttsx3 = "*"
+pypiwin32 = {version="*", sys_platform = "== 'win32'"}
 
 [requires]
 python_version = "3.7"
