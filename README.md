@@ -4,7 +4,12 @@ A program that aims to automate the creation of "reddit videos" (r/AskReddit sty
 
 The goal for this project is to be able to composite text to speech audio alongside screenshots for a given reddit post and export it as a video. It is currently in development. 
 
-The current state of the project is such that you can choose a reddit post and the program takes screenshots for all top level comments within the post. 
+The current state of the project allows it to:
+- Take screenshots of top level comments of a thread
+- Generate audio using the epic Daniel voice for each comment. 
+
+Todo:
+- Composite the screenshots and audio into a video. 
 
 ## Installation
 
@@ -20,7 +25,7 @@ Install dependancies
 $ pipenv install
 ```
 
-Create a .env file with your [reddit client id and secret](https://praw.readthedocs.io/en/latest/getting_started/quick_start.html).
+Create a .env file with your [reddit client id and secret](https://praw.readthedocs.io/en/latest/getting_started/quick_start.html). This is to check the hot posts for today for r/AskReddit. If you are supplying a specific post id via the CLI then this is not needed. 
 ```env
 CLIENT_ID=xxxxxx
 CLIENT_SECRET=xxxxxxx
