@@ -59,19 +59,19 @@ def fetch_screenshots(submission, dump_dir="dump", night_mode=False, limit=50):
 
     comments = driver.find_elements_by_class_name("top-level")
 
-    id = 1
+    _id = 1
 
     comment_text = {}
 
     for comment in comments:
         try:
             text = comment.find_element_by_xpath("./div[2]/div[2]").text
-            comment_text[id] = text
-            comment.screenshot(f"{dump_dir}/comment-{id}.png")
-            print("Took screenshot of comment", id)
-            if id == limit:
+            comment_text[_id] = text
+            comment.screenshot(f"{dump_dir}/comment-{_id}.png")
+            print("Took screenshot of comment", _id)
+            if _id == limit:
                 break
-            id += 1
+            _id += 1
         except NoSuchElementException:
             pass
 
