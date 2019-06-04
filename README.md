@@ -25,7 +25,7 @@ Install dependancies
 $ pipenv install
 ```
 
-Create a .env file with your [reddit client id and secret](https://praw.readthedocs.io/en/latest/getting_started/quick_start.html).
+Create a .env file with your [reddit client id and secret](https://praw.readthedocs.io/en/latest/getting_started/quick_start.html). This is to check the hot posts for today for r/AskReddit. If you are supplying a specific post id via the CLI then this is not needed. 
 ```env
 CLIENT_ID=xxxxxx
 CLIENT_SECRET=xxxxxxx
