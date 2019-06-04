@@ -31,7 +31,7 @@ def composite_video():
     for audio, image in zip(audio_clips, image_clips):
         clip = (
             CompositeVideoClip(
-                [background, image.set_pos("center").resize(0.8)], size=moviesize
+                [background, image.set_pos("center").resize(0.7)], size=moviesize
             )
             .set_duration(audio.duration)
             .set_audio(audio)
