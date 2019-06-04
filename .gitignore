@@ -115,3 +115,5 @@ dmypy.json
 .vscode/settings.json
 *.png
 *.json
+*.mp3
+.DS_Store
