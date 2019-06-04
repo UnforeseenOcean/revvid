@@ -2,7 +2,7 @@ import pyttsx3
 import json
 
 
-def generate_audio(title, comment_text):
+def generate_audio(title, comment_text, end):
     engine = pyttsx3.init()
 
     engine.setProperty("rate", 180)
@@ -16,6 +16,7 @@ def generate_audio(title, comment_text):
         engine.setProperty("voice", voice.id)
 
     engine.save_to_file(title, "dump/title.mp3")
+    engine.save_to_file(end, "dump/end.mp3")
 
     for id, text in comment_text.items():
         engine.save_to_file(text, f"dump/audio-{id}.mp3")
