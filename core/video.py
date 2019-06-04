@@ -14,7 +14,7 @@ def composite_video():
     background = ColorClip(moviesize, color=(26, 26, 27))
 
     intermission = (
-        VideoFileClip("data/transition.mp4").set_duration(1).resize(height=720)
+        VideoFileClip("data/transition.mp4").set_duration(0.7).resize(height=720)
     )
 
     title_img = ImageClip("dump/title.png").set_pos("center").resize(0.7)
