@@ -39,16 +39,19 @@ def composite_video():
         final.append(clip)
         final.append(intermission)
 
-    end_audio = AudioFileClip('dump/end.mp3')
+    end_audio = AudioFileClip("dump/end.mp3")
     final.append(background.set_duration(end_audio.duration).set_audio(end_audio))
 
     mins, secs = divmod(sum(x.duration for x in final), 60)
-    print(f'Duration of video: {int(mins)}m, {int(secs)}s')
+    print(f"Duration of video: {int(mins)}m, {int(secs)}s")
 
-    concatenate_videoclips(final).write_videofile(
-        "video.mp4", fps=20, codec="libx264", audio_codec="aac"
-    )
+    vid = concatenate_videoclips(final)
 
-    shutil.rmtree('dump')
+    bg_music = afx.audio_loop(
+        AudioFileClip("data/light-music.mp3"), duration=vid.duration
+    ).volumex(0.6)
+    final_audio = CompositeAudioClip([vid.audio, bg_music])
+    vid = vid.set_audio(final_audio)
+    vid.write_videofile("video.mp4", fps=20, codec="libx264", audio_codec="aac")
 
-
+    shutil.rmtree("dump")
