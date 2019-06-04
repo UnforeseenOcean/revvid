@@ -7,10 +7,11 @@ The goal for this project is to be able to composite text to speech audio alongs
 The current state of the project allows it to:
 - Take screenshots of top level comments of a thread
 - Generate audio using the epic Daniel voice for each comment. 
-- Composite them into a cool video. Heres a [**sample**.](https://youtu.be/qaQhsALt8mk)
+- Composite them into a cool video. Heres a [**sample**.](https://youtu.be/o18mIpx_NxA)
 
 Todo:
-- Add customisability, since stuff like the outro, subreddit and number of comments are hardcoded. 
+- Add customisability, since stuff like the outro, subreddit and number of comments are hardcoded.
+- Turn it into a CLI tool 
 
 Please feel free to make a PR with improvements :)
 
