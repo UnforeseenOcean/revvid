@@ -4,7 +4,10 @@ import time
 import json
 
 import praw
-from core.aggregate import fetch_screenshots
+
+from core.screenshots import fetch_screenshots
+from core.audio import generate_audio
+from core.video import composite_video
 
 
 if 'dump' not in os.listdir():
@@ -31,9 +34,8 @@ else:
     index = int(input('\nSelect one: '))
     submission = hot[index]
 
-fetch_screenshots(submission)
-print('Done.')
-
-
-
-
+if __name__ == "__main__":
+    comment_text = fetch_screenshots(submission, night_mode=True, limit=10)
+    generate_audio(comment_text)
+    composite_video()
+    print('Done.')
