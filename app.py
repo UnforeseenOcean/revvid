@@ -35,7 +35,8 @@ else:
     submission = hot[index]
 
 if __name__ == "__main__":
-    comment_text = fetch_screenshots(submission, night_mode=True, limit=10)
-    generate_audio(submission.title, comment_text)
+    comment_text = fetch_screenshots(submission, night_mode=True, limit=3)
+    title_text = 'r slash ask reddit... ' + submission.title # lol
+    generate_audio(title_text, comment_text, end='Thanks for watching, make sure to like and subscribe since I am not a bot.')
     composite_video()
     print("Done.")
