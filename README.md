@@ -2,7 +2,7 @@
 
 You've probably seen a bunch of /r/AskReddit narration style videos by now. So I randomly thought to start working on a program to automate the creation of them. Its still a WIP but the current state of the project allows it to: 
 
-- Take screenshots of top level comments of a thread
+- Take screenshots of top level comments of a thread using selenium.
 - Generate audio using the epic Daniel voice for each comment. 
 - Have looping background music.
 - Composite all of the above into a cool video. Heres a [**sample**.](https://youtu.be/o18mIpx_NxA)
