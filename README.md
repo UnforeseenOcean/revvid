@@ -1,17 +1,17 @@
-# Revvid
+<h1 align='center'>Revvid</h1>
 
-A program that aims to automate the creation of "reddit videos" (r/AskReddit style).
-
-The goal for this project is to be able to composite text to speech audio alongside screenshots for a given reddit post and export it as a video. It is currently in development. 
+A program that aims to automate the creation of "reddit narration videos" (r/AskReddit style). 
 
 The current state of the project allows it to:
 - Take screenshots of top level comments of a thread
 - Generate audio using the epic Daniel voice for each comment. 
 - Have looping background music.
 - Composite all of the above into a cool video. Heres a [**sample**.](https://youtu.be/o18mIpx_NxA)
+- ~~Output high quality content~~
 
 Todo:
-- Add customisability, since stuff like the outro, subreddit and number of comments are hardcoded.
+- Add customisability since things like the outro, subreddit and comment limit are currently hardcoded.
+- Ability to curate your own comments/support for replies. 
 - Turn it into a CLI tool 
 
 Please feel free to make a PR with improvements :)
