@@ -2,8 +2,14 @@ import os
 import shutil
 from moviepy.editor import *
 
+from pathlib import Path
 
-def composite_video():
+dp = Path(__file__).parent / "data"
+
+
+def composite_video(
+    output_file, bg_music_path=dp / "light-music.mp4", transition=dp / "transition.mp4"
+):
 
     moviesize = (1280, 720)
 
@@ -13,9 +19,7 @@ def composite_video():
 
     background = ColorClip(moviesize, color=(26, 26, 27))
 
-    intermission = (
-        VideoFileClip("data/transition.mp4").set_duration(0.7).resize(height=720)
-    )
+    intermission = VideoFileClip(transition).set_duration(0.7).resize(height=720)
 
     title_img = ImageClip("dump/title.png").set_pos("center").resize(0.7)
     title_audio = AudioFileClip("dump/title.mp3")
@@ -48,7 +52,7 @@ def composite_video():
     vid = concatenate_videoclips(final)
 
     bg_music = afx.audio_loop(
-        AudioFileClip("data/light-music.mp3"), duration=vid.duration
+        AudioFileClip(bg_music_path), duration=vid.duration
     ).volumex(0.6)
     final_audio = CompositeAudioClip([vid.audio, bg_music])
     vid = vid.set_audio(final_audio)
