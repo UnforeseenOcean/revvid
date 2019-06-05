@@ -1,10 +1,7 @@
 # redigen
 
-A program that aims to automate the creation of "reddit videos" (r/AskReddit style).
+You've probably seen a bunch of /r/AskReddit narration style videos by now. So I randomly thought to start working on a program to automate the creation of them. Its still a WIP but the current state of the project allows it to: 
 
-The goal for this project is to be able to composite text to speech audio alongside screenshots for a given reddit post and export it as a video. It is currently in development. 
-
-The current state of the project allows it to:
 - Take screenshots of top level comments of a thread
 - Generate audio using the epic Daniel voice for each comment. 
 - Have looping background music.
