@@ -1,4 +1,4 @@
-# redigen
+<h1 align='center'>Revvid</h1>
 
 You've probably seen a bunch of /r/AskReddit narration style videos by now. So I randomly thought to start working on a program to automate the creation of them. Its still a WIP but the current state of the project allows it to: 
 
@@ -6,9 +6,11 @@ You've probably seen a bunch of /r/AskReddit narration style videos by now. So I
 - Generate audio using the epic Daniel voice for each comment. 
 - Have looping background music.
 - Composite all of the above into a cool video. Heres a [**sample**.](https://youtu.be/o18mIpx_NxA)
+- ~~Output high quality content~~
 
 Todo:
-- Add customisability, since stuff like the outro, subreddit and number of comments are hardcoded.
+- Add customisability since things like the outro, subreddit and comment limit are currently hardcoded.
+- Ability to curate your own comments/support for replies. 
 - Turn it into a CLI tool 
 
 Please feel free to make a PR with improvements :)
@@ -18,8 +20,8 @@ Please feel free to make a PR with improvements :)
 Clone the repo
 
 ```console
-$ git clone https://github.com/kyb3r/redigen
-$ cd redigen
+$ git clone https://github.com/kyb3r/revvid
+$ cd revvid
 ```
 
 Install dependancies
