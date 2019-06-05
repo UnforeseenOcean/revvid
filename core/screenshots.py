@@ -66,6 +66,8 @@ def fetch_screenshots(submission, dump_dir="dump", night_mode=False, limit=50):
     for comment in comments:
         try:
             text = comment.find_element_by_xpath("./div[2]/div[2]").text
+            if len(text) > 1000:
+                continue
             comment_text[_id] = text
             comment.screenshot(f"{dump_dir}/comment-{_id}.png")
             print("Took screenshot of comment", _id)
