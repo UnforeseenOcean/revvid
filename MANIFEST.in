@@ -1,0 +1,2 @@
+include *.md LICENSE
+include data *.mp3 *.mp4

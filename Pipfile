@@ -9,8 +9,9 @@ verify_ssl = true
 selenium = "*"
 praw = "*"
 pyttsx3 = "*"
-pypiwin32 = {version = "*", sys_platform = "== 'win32'"}
+pypiwin32 = {version = "*",sys_platform = "== 'win32'"}
 moviepy = "*"
+click = "*"
 
 [requires]
 python_version = "3.7"
