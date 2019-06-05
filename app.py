@@ -21,6 +21,7 @@ reddit = praw.Reddit(
 
 if len(sys.argv) > 1:
     submission = praw.models.Submission(reddit, id=sys.argv[1])
+    print(submission.url)
     print("Fetching screenshots from:", submission.title)
 else:
     sub = reddit.subreddit("askreddit")
@@ -35,12 +36,11 @@ else:
     submission = hot[index]
 
 if __name__ == "__main__":
-    comment_text = fetch_screenshots(submission, night_mode=True, limit=3)
+    comment_text = fetch_screenshots(submission, night_mode=True, limit=20)
     title_text = "r slash ask reddit... " + submission.title  # lol
     generate_audio(
         title_text,
         comment_text,
-        end="Thanks for watching mate, make sure to smash that star button for more high quality content.",
+        end="Thanks for watching mate, make sure to smash that like button for more low quality content",
     )
     composite_video()
-    print("Done.")
