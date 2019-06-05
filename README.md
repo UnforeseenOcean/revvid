@@ -21,8 +21,8 @@ Please feel free to make a PR with improvements :)
 Clone the repo
 
 ```console
-$ git clone https://github.com/kyb3r/redigen
-$ cd redigen
+$ git clone https://github.com/kyb3r/revvid
+$ cd revvid
 ```
 
 Install dependancies
