@@ -1,4 +1,4 @@
-<h1 align='center'>Revvid<h1>
+<h1 align='center'>Revvid</h1>
 
 A program that aims to automate the creation of "reddit videos" (r/AskReddit style).
 
