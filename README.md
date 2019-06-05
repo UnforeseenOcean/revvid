@@ -1,4 +1,4 @@
-# redigen
+# Revvid
 
 A program that aims to automate the creation of "reddit videos" (r/AskReddit style).
 
